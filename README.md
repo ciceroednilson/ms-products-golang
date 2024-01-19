@@ -62,6 +62,23 @@ go mod tidy
 ![docs_readme/execute.png](docs_readme/execute.png)
 
 
+## ⚙️ Test with Postman - Collection.
+
+ * [docs_readme/postman_collection.json](docs_readme/postman_collection.json)
+
+
+
+
+
+## 📌 Versão
+
+1.0
+
+## ✒️ Autor
+
+Cícero Ednilson - ciceroednilson@gmail.com
+
+
 
 
 go install github.com/swaggo/swag/cmd/swag@latest
