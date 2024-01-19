@@ -19,7 +19,7 @@ The principal objective of this project is to show how the use Golang on a hexag
 
 ## ⚙️ Architecture
 
-![docs_readme/archicture.png](docs_readme/archicture.png)
+![docs_readme/archicture_new.png](docs_readme/archicture_new.png)
 
 ## ⚙️ Structure
 
