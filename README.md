@@ -1,12 +1,12 @@
-# Project to learn Golang, for this, I created a crud of the product.
+# Project to learn Golang, for this I created a Crud of the product.
 
 This project isn't the object be a commercial application. 
 
-## 🚀 Starting
+## 🚀 Starting.
 
 The principal objective of this project is to show how the use Golang on a hexagonal architecture. 
 
-## 🛠 Stack
+## 🛠 Stack.
 
 <ol>
   <li>Golang</li>
@@ -17,15 +17,15 @@ The principal objective of this project is to show how the use Golang on a hexag
   <li>Docker</li>
 </ol>
 
-## ⚙️ Architecture
+## ⚙️ Architecture.
 
 ![docs_readme/archicture_new.png](docs_readme/archicture_new.png)
 
-## ⚙️ Structure
+## ⚙️ Structure.
 
 ![docs_readme/structure.png](docs_readme/structure.png)
 
-## ⚙️ Data Base
+## ⚙️ Data Base.
 
 ![docs_readme/database.png](docs_readme/database.png)
 
@@ -129,7 +129,7 @@ Creating Swagger of files.
 swag init -g cmd/main.go handlers/producthandler/producthandler.go 
 ~~~~
 
-## 📌 Documantation swaggo
+## 📌 Documentation swaggo
 
 https://github.com/swaggo/http-swagger
 
