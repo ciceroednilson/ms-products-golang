@@ -68,36 +68,76 @@ go mod tidy
 
 ![docs_readme/postman.png](docs_readme/postman.png)
 
+## ⚙️ Test with Postman - Find all products.
 
-## 📌 Versão
-
-1.0
-
-## ✒️ Autor
-
-Cícero Ednilson - ciceroednilson@gmail.com
+![docs_readme/postman_findall.png](docs_readme/postman_findall.png)
 
 
+## ⚙️ Test with Postman - Find product by id.
+
+![docs_readme/postman_findbyid.png](docs_readme/postman_findbyid.png)
 
 
-go install github.com/swaggo/swag/cmd/swag@latest
+## ⚙️ Test with Postman - Find product details by id.
 
+![docs_readme/postman_productdetail.png](docs_readme/postman_productdetail.png)
+
+
+## ⚙️ Test with Postman - Create a product.
+
+![docs_readme/postman_create_product.png](docs_readme/postman_create_product.png)
+
+## ⚙️ Test with Postman - Update a product.
+
+![docs_readme/postman_update_Product.png](docs_readme/postman_update_Product.png)
+
+
+## ⚙️ Test with Postman - Delete a product.
+
+![docs_readme/postman_delete_product.png](docs_readme/postman_delete_product.png)
+
+
+## ✒️ Help to add Swagger to a new project.
+
+Install a dependency. 
+
+~~~~shell
+ go install github.com/swaggo/swag/cmd/swag@latest
+~~~~
+
+Edit the profile.
+
+~~~~shell
 vi ~/.profile 
+~~~~
 
+Case no exists the command below, add the line on the profile file. 
+
+~~~~shell
 export PATH=$(go env GOPATH)/bin:$PATH
+~~~~
 
+Reload the file.
+
+~~~~shell
 source ~/.profile 
+~~~~
 
-swag init
+Creating Swagger of files.
 
+~~~~shell
+swag init -g cmd/main.go handlers/producthandler/producthandler.go 
+~~~~
 
-//create swagger docs
-
-swag init -g cmd/main.go 
-
-
-Docs
+## 📌 Documantation swaggo
 
 https://github.com/swaggo/http-swagger
 
-swag init -g cmd/main.go handlers/producthandler/producthandler.go 
+
+## 📌 Version.
+
+1.0
+
+## ✒️ Author.
+
+Cícero Ednilson - ciceroednilson@gmail.com
