@@ -1,6 +1,6 @@
-# Project to learn Golang, for this I created a Crud of the product.
+# Project to learn Golang.
 
-This project isn't the object be a commercial application. 
+Creating a Crud of the product. 
 
 ## 🚀 Starting.
 
