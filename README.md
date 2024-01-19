@@ -66,8 +66,7 @@ go mod tidy
 
  * [docs_readme/postman_collection.json](docs_readme/postman_collection.json)
 
-
-
+![docs_readme/postman.png](docs_readme/postman.png)
 
 
 ## 📌 Versão
