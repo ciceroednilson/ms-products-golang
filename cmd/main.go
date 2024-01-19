@@ -2,6 +2,7 @@ package main
 
 import (
 	"go/core/usercases/productusercase"
+	_ "go/docs"
 	"go/handlers/producthandler"
 	"go/infrastructure/repositories/productrepository"
 	"log"
@@ -9,31 +10,51 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
+	httpSwagger "github.com/swaggo/http-swagger"
 )
 
-func main() {
+// @title           Swagger Product API
+// @version         1.0
+// @description     This is a api to manager the products .
+// @termsOfService  http://swagger.io/terms/
 
+// @contact.name   Cícero Ednilson
+// @contact.url    https://www.linkedin.com/in/c%C3%ADcero-ednilson-de-barros-machado-35153888/
+// @contact.email  ciceroednilson@gmail.com
+
+// @license.name  Apache 2.0
+// @license.url   http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host      localhost:8000
+
+// @externalDocs.description  Create Swagger docs with swaggo
+// @externalDocs.url          https://github.com/swaggo/http-swagger
+// @BasePath /
+func main() {
 	productrepository := productrepository.NewRepository()
 	productusercase := productusercase.NewProductUserCase(productrepository)
 	producthandler := producthandler.NewProductHandler(productusercase)
-	startServer(producthandler)
+	initialServer(producthandler)
 }
 
-func startServer(producthandler producthandler.ProductHandler) {
+func initialServer(producthandler producthandler.ProductHandler) {
 	router := mux.NewRouter()
 	sub := router.PathPrefix("/products").Subrouter()
-	sub.HandleFunc("/{key}", producthandler.Read).Methods("GET")
-	sub.HandleFunc("/{key}/details", producthandler.ReadDetails).Methods("GET")
-	sub.HandleFunc("", producthandler.ReadAll).Methods("GET")
-	sub.HandleFunc("", producthandler.Create).Methods("POST")
-	sub.HandleFunc("", producthandler.Update).Methods("PUT")
-	sub.HandleFunc("/{key}", producthandler.Delete).Methods("DELETE")
+	sub.HandleFunc("/{key}", producthandler.Read).Methods(http.MethodGet)
+	sub.HandleFunc("/{key}/details", producthandler.ReadDetails).Methods(http.MethodGet)
+	sub.HandleFunc("", producthandler.ReadAll).Methods(http.MethodGet)
+	sub.HandleFunc("", producthandler.Create).Methods(http.MethodPost)
+	sub.HandleFunc("", producthandler.Update).Methods(http.MethodPut)
+	sub.HandleFunc("/{key}", producthandler.Delete).Methods(http.MethodDelete)
+
+	router.PathPrefix("/swagger").Handler(httpSwagger.WrapHandler)
 
 	server := &http.Server{
-		Handler:      sub,
+		Handler:      router,
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
-		Addr:         "127.0.0.1:8000",
+		Addr:         "localhost:8000",
 	}
+
 	log.Fatal(server.ListenAndServe())
 }

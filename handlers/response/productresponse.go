@@ -4,6 +4,9 @@ import (
 	"go/core/domain/productdomain"
 )
 
+// Product response
+// @Description ProductResponse
+// @Description Product fields
 type ProductResponse struct {
 	Id          int    `json:"id"`
 	Description string `json:"description"`

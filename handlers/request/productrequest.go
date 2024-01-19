@@ -2,12 +2,15 @@ package request
 
 import "go/core/domain/productdomain"
 
+// Product request
+// @Description ProductRequest
+// @Description Product fields
 type ProductRequest struct {
 	Id          int    `json:"id"`
-	Description string `json:"description" validate:"required,min=10,max=100"`
-	Price       string `json:"price" validate:"required"`
-	Total       int16  `json:"total" validate:"required"`
-	Created     string `json:"created" validate:"required"`
+	Description string `json:"description"`
+	Price       string `json:"price"`
+	Total       int16  `json:"total"`
+	Created     string `json:"created"`
 }
 
 func (p *ProductRequest) ToDomain() productdomain.Product {
