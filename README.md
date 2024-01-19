@@ -61,6 +61,12 @@ go mod tidy
 
 ![docs_readme/execute.png](docs_readme/execute.png)
 
+## ⚙️ Swagger.
+
+ * [http://localhost:8000/swagger/index.html](http://localhost:8000/swagger/index.html)
+
+![docs_readme/swagger.png](docs_readme/swagger.png)
+
 
 ## ⚙️ Test with Postman - Collection.
 
