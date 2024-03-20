@@ -1,6 +1,6 @@
 # Project to learn Golang.
 
-Creating a Crud of the product. 
+Crud of the product. 
 
 ## 🚀 Starting.
 
