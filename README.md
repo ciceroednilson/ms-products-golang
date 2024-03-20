@@ -4,7 +4,7 @@ Crud of the product.
 
 ## 🚀 Starting.
 
-The principal objective of this project is to show how the use Golang on a hexagonal architecture. 
+The principal objective of this project is to show how to use Golang on a hexagonal architecture. 
 
 ## 🛠 Stack.
 
