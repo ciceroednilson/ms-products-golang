@@ -35,7 +35,7 @@ The principal objective of this project is to show how to use Golang on a hexago
 CREATE DATABASE `db_products`;
 ~~~~
 
-## ⚙️ Creating a Table on Databsse.
+## ⚙️ Creating a Table on Database.
 
 ~~~~sql
 CREATE TABLE IF NOT EXISTS tb_product(
